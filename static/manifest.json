@@ -1,8 +1,8 @@
 {
 	"background_color": "#ffffff",
-	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"theme_color": "#ffffff",
+	"name": "Sapper demo app",
+	"short_name": "Sapper",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [

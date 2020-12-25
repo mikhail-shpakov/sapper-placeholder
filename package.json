@@ -1,7 +1,23 @@
 {
-  "name": "TODO",
-  "description": "TODO",
-  "version": "0.0.1",
+  "name": "sapper-placeholder",
+  "version": "0.1.0",
+  "description": "Sapper.js demo app by Mikhail Shpakov",
+  "author": "Mikhail Shpakov <mikhail@shpakov.dev> (https://shpakov.dev/)",
+  "bugs": {
+    "url": "https://github.com/mikhail-shpakov/sapper-placeholder/issues"
+  },
+  "homepage": "https://github.com/mikhail-shpakov/sapper-placeholder",
+  "keywords": [
+    "Svelte",
+    "Sapper",
+    "Scss",
+    "Hostman"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikhail-shpakov/sapper-placeholder.git"
+  },
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
