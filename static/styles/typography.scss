@@ -1,0 +1,62 @@
+@import "static/styles/variables";
+
+html,
+body {
+  color: $text-primary;
+  line-height: 1.5;
+
+  .h1 {
+    font-size: $font-size-title-1-mobile;
+    font-weight: bold;
+    line-height: 120%;
+
+    @media (min-width: $tablet) {
+      font-size: $font-size-title-1;
+    }
+  }
+
+  .body1.medium {
+    font-size: $font-size-body-1-mobile;
+    font-weight: 500;
+
+    @media (min-width: $tablet) {
+      font-size: $font-size-body-1;
+    }
+  }
+
+  .body2 {
+    font-size: $font-size-body-2-mobile;
+
+    @media (min-width: $tablet) {
+      font-size: $font-size-body-2;
+    }
+
+    &.medium {
+      font-weight: 500;
+    }
+  }
+
+  .body3 {
+    font-size: $font-size-body-3-mobile;
+
+    @media (min-width: $tablet) {
+      font-size: $font-size-body-3;
+    }
+
+    &.medium {
+      font-weight: 500;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    display: table;
+    color: $primary;
+
+    &:hover {
+      color: $text-primary;
+    }
+  }
+}

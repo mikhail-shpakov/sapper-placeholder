@@ -16,7 +16,8 @@ const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const preprocess = sveltePreprocess({
 	scss: {
-		includePaths: ['src'],
+		includePaths: ['src', 'static/styles'],
+		prependData: `@import 'index.scss';`,
 	},
 	postcss: {
 		plugins: [require('autoprefixer')],
@@ -24,6 +25,7 @@ const preprocess = sveltePreprocess({
 });
 
 const onwarn = (warning, onwarn) =>
+	(warning.code !== "css-unused-selector") ||
 	(warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
 	(warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
 	onwarn(warning);
