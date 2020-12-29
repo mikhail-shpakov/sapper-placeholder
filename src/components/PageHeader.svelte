@@ -19,5 +19,5 @@
 
 <div class="ph">
   <h1 class="h1 ph__title">{@html title}</h1>
-  <p class="body1 ph__subtitle">{@html subtitle}</p>
+  <p class="body2 ph__subtitle">{@html subtitle}</p>
 </div>

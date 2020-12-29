@@ -18,5 +18,5 @@
 
 <div class="up">
   <p class="up__title body1 medium">{post.title}</p>
-  <p class="up__body body3">{post.body}</p>
+  <p class="up__body body2">{post.body}</p>
 </div>

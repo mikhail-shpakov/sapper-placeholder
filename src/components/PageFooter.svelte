@@ -9,14 +9,14 @@
   }
 </style>
 
-<div class="pf body1">
+<div class="pf body2">
   <a
       href="https://github.com/mikhail-shpakov/sapper-placeholder"
       target="_blank"
       rel="noopener noreferrer">
     Проект на Github
   </a>
-  <p class="body1 pf__subtitle">
+  <p class="body2 pf__subtitle">
     {new Date().getUTCFullYear()}
     · Команда Timeweb для Tproger.ru
   </p>

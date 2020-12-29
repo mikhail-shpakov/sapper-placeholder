@@ -16,9 +16,8 @@ body {
     }
   }
 
-  .body1.medium {
+  .body1 {
     font-size: $font-size-body-1-mobile;
-    font-weight: bold;
 
     @media (min-width: $tablet) {
       font-size: $font-size-body-1;
@@ -31,22 +30,10 @@ body {
     @media (min-width: $tablet) {
       font-size: $font-size-body-2;
     }
-
-    &.medium {
-      font-weight: bold;
-    }
   }
 
-  .body3 {
-    font-size: $font-size-body-3-mobile;
-
-    @media (min-width: $tablet) {
-      font-size: $font-size-body-3;
-    }
-
-    &.medium {
-      font-weight: bold;
-    }
+  .medium {
+    font-weight: bold;
   }
 
   a {

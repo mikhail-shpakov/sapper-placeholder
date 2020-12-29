@@ -14,6 +14,15 @@
     @media (min-width: $desktop) {
       margin-bottom: 0;
     }
+
+    &__name {
+      margin-bottom: 28px;
+    }
+
+    &__link {
+      display: inline-flex;
+      margin-top: 28px;
+    }
   }
 </style>
 
@@ -26,8 +35,7 @@
 
   <a
       class="uc__link"
-      href="/user/{user.id}"
-      userName={user.name}>
+      href="/user/{user.id}">
     Смотреть посты пользователя
   </a>
 </div>
