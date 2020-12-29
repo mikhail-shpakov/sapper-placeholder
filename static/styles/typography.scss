@@ -4,6 +4,7 @@ html,
 body {
   color: $text-primary;
   line-height: 1.5;
+  font-family: $font-family;
 
   .h1 {
     font-size: $font-size-title-1-mobile;
@@ -17,7 +18,7 @@ body {
 
   .body1.medium {
     font-size: $font-size-body-1-mobile;
-    font-weight: 500;
+    font-weight: bold;
 
     @media (min-width: $tablet) {
       font-size: $font-size-body-1;
@@ -32,7 +33,7 @@ body {
     }
 
     &.medium {
-      font-weight: 500;
+      font-weight: bold;
     }
   }
 
@@ -44,15 +45,14 @@ body {
     }
 
     &.medium {
-      font-weight: 500;
+      font-weight: bold;
     }
   }
 
   a {
     text-decoration: none;
     cursor: pointer;
-    font-weight: 500;
-    display: table;
+    font-weight: bold;
     color: $primary;
 
     &:hover {
