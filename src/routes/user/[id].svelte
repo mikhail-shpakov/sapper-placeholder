@@ -1,7 +1,7 @@
 <script context="module">
   export async function preload({params}) {
     try {
-      const res = await this.fetch(`https://jsonplaceholder.typicode.com/posts?userId=${params.slug}`);
+      const res = await this.fetch(`https://jsonplaceholder.typicode.com/posts?userId=${params.id}`);
       const posts = await res.json();
       return {posts}
     } catch (e) {
@@ -15,7 +15,6 @@
   import PageHeader from "../../components/PageHeader.svelte";
 
   export let posts;
-  export let userName;
 </script>
 
 <svelte:head>

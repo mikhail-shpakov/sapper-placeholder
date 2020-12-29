@@ -2,7 +2,7 @@
   import PageFooter from "../components/PageFooter.svelte";
 </script>
 
-<style lang="scss" global> // TODO
+<style lang="scss" global>
   main {
     position: relative;
     max-width: $max-content;

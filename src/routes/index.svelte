@@ -1,7 +1,7 @@
 <script>
-  import UserCard from "../components/UserCard.svelte";
   import {onMount} from 'svelte'
   import PageHeader from "../components/PageHeader.svelte";
+  import UserCard from "../components/UserCard.svelte";
 
   let users = []
 
@@ -30,18 +30,16 @@
   <title>Первое приложение на Sapper.js</title>
 </svelte:head>
 
-<div class="page">
-  <PageHeader
-      title="Sapper.js"
-      subtitle="Создаём своё первое приложение с помощью
+<PageHeader
+    title="Sapper.js"
+    subtitle="Создаём своё первое приложение с помощью
       <a href='https://jsonplaceholder.typicode.com/' target='_blank' rel='noopener noreferrer'>
         JSON Placeholder
       </a>"
-  />
+/>
 
-  <div class="users">
-    {#each users as user}
-      <UserCard user={user}/>
-    {/each}
-  </div>
+<div class="users">
+  {#each users as user}
+    <UserCard user={user}/>
+  {/each}
 </div>
