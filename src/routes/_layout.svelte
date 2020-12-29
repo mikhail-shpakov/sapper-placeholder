@@ -1,22 +1,25 @@
 <script>
-	import Nav from '../components/Nav.svelte';
-
-	export let segment;
+  import PageFooter from "../components/PageFooter.svelte";
 </script>
 
-<style>
-	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+<style lang="scss" global> // TODO
+  main {
+    position: relative;
+    max-width: $max-content;
+    margin: 40px auto;
+    padding: 0 24px;
+
+    @media (min-width: $tablet) {
+      margin: 80px auto;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
 </style>
 
-<Nav {segment}/>
-
 <main>
-	<slot></slot>
+  <slot/>
+  <PageFooter/>
 </main>

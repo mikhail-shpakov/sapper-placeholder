@@ -1,50 +1,47 @@
 <script>
-	import successkid from 'images/successkid.jpg';
+  import UserCard from "../components/UserCard.svelte";
+  import {onMount} from 'svelte'
+  import PageHeader from "../components/PageHeader.svelte";
+
+  let users = []
+
+  onMount(async () => {
+    try {
+      const res = await fetch(`https://jsonplaceholder.typicode.com/users`);
+      users = await res.json();
+    } catch (e) {
+      alert(`Произошла ошибка при загрузке пользователей: ${e}`)
+    }
+  })
+
 </script>
 
-<style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+<style lang="scss">
+  .users {
+    @media (min-width: $desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 24px;
+    }
+  }
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+  <title>Первое приложение на Sapper.js</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<div class="page">
+  <PageHeader
+      title="Sapper.js"
+      subtitle="Создаём своё первое приложение с помощью
+      <a href='https://jsonplaceholder.typicode.com/' target='_blank' rel='noopener noreferrer'>
+        JSON Placeholder
+      </a>"
+  />
 
-<figure>
-	<img alt="Success Kid" src="{successkid}">
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+  <div class="users">
+    {#each users as user}
+      <UserCard user={user}/>
+    {/each}
+  </div>
+</div>
